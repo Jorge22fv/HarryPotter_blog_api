@@ -1,19 +1,19 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			slytherinCharacters : [],
+			slytherinCharacters: [],
 			hufflepuffCharacters: [],
-			ravenclawCharacters : [],
-			gryffindorCharacters: [],	
+			ravenclawCharacters: [],
+			gryffindorCharacters: [],
 		},
 		actions: {
-			getSlytherinCharacters: () =>{
+			getSlytherinCharacters: () => {
 				var requestOptions = {
 					method: 'GET',
 					redirect: 'follow'
-				  };
-				  
-				  fetch("https://hp-api.herokuapp.com/api/characters/house/slytherin", requestOptions)
+				};
+
+				fetch(process.env.Slytherin, requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						slytherinCharacters: result
@@ -21,13 +21,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log('error', error));
 			},
 
-			getHufflepufCharacters: () =>{
+			getHufflepufCharacters: () => {
 				var requestOptions = {
 					method: 'GET',
 					redirect: 'follow'
-				  };
-				  
-				  fetch("https://hp-api.herokuapp.com/api/characters/house/hufflepuff", requestOptions)
+				};
+
+				fetch(process.env.Hufflepuf, requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						hufflepuffCharacters: result
@@ -35,13 +35,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log('error', error));
 			},
 
-			getRavenclawCharacters: () =>{
+			getRavenclawCharacters: () => {
 				var requestOptions = {
 					method: 'GET',
 					redirect: 'follow'
-				  };
-				  
-				  fetch("https://hp-api.herokuapp.com/api/characters/house/ravenclaw", requestOptions)
+				};
+
+				fetch(process.env.Ravenclaw, requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						ravenclawCharacters: result
@@ -49,13 +49,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log('error', error));
 			},
 
-			getGryffindorCharacters: ()=>{
+			getGryffindorCharacters: () => {
 				var requestOptions = {
 					method: 'GET',
 					redirect: 'follow'
-				  };
-				  
-				  fetch("https://hp-api.herokuapp.com/api/characters/house/gryffindor", requestOptions)
+				};
+
+				fetch(process.env.Gryffindor, requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						gryffindorCharacters: result

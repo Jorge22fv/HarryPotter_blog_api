@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { Card } from "./card";
-import { Context } from "../store/appContext";
+import { Context } from "../../store/appContext";
 
-export const CharacterList= ()=>{
+export const CharacterList = () => {
 
     const { store } = useContext(Context);
 
-    return(
+    return (
         <div>
             <div className="row border-none">
                 {store.slytherinCharacters.length > 0 && store.slytherinCharacters.map((character, i) => (

@@ -1,9 +1,52 @@
-.card {
-   width: 250px;
-   height: 350px;
-   
+/* ImageGallery.css */
+.image-card {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 63vh;
+    width: 100%;
 }
-img{
-    max-height: 200px;
-   
+
+.house-card {
+    flex: 1;
+    max-width: 100%;
+    padding: 3px;
+    text-align: center;
+    margin: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    /* Agrega una transición suave */
+}
+
+.house-card:hover {
+    transform: scale(1.05);
+    /* Agrandar la imagen cuando el cursor esté sobre ella */
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: 'Harry P';
+    src: url('../fonts/HarryP.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.welcome-message {
+    font-family: 'Harry P', sans-serif;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DAA520;
+    margin: 0;
+    height: 30vh;
+
 }
