@@ -7,10 +7,10 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import Slytherin from "./component/slytherin"
-import Ravenclaw from "./component/ravenclaw"
-import Hufflepuff from "./component/hufflepuff";
-import Gryffindor from "./component/gryffindor";
+import Slytherin from "./component/houses/slytherin"
+import Hufflepuff from "./component/houses/hufflepuff";
+import Gryffindor from "./component/houses/gryffindor";
+import Ravenclaw from "./component/houses/ravenclaw";
 
 //create your first component
 const Layout = () => {
