@@ -27,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch(process.env.Hufflepuf, requestOptions)
+				fetch(process.env.Hufflepuff, requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						hufflepuffCharacters: result

@@ -7,6 +7,10 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Slytherin from "./component/slytherin"
+import Ravenclaw from "./component/ravenclaw"
+import Hufflepuff from "./component/hufflepuff";
+import Gryffindor from "./component/gryffindor";
 
 //create your first component
 const Layout = () => {
@@ -22,6 +26,18 @@ const Layout = () => {
 					<Switch>
 						<Route exact path="/">
 							<Home />
+						</Route>
+						<Route exact path="/slytherin">
+							<Slytherin />
+						</Route>
+						<Route exact path="/ravenclaw">
+							<Ravenclaw />
+						</Route>
+						<Route exact path="/gryffindor">
+							<Gryffindor />
+						</Route>
+						<Route exact path="/hufflepuff">
+							<Hufflepuff />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
