@@ -39,6 +39,7 @@ const Layout = () => {
 						<Route exact path="/hufflepuff">
 							<Hufflepuff />
 						</Route>
+
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.house-card {
+.house-card1 {
     flex: 1;
     max-width: 100%;
     padding: 3px;
@@ -21,7 +21,7 @@
     /* Agrega una transición suave */
 }
 
-.house-card:hover {
+.house-card1:hover {
     transform: scale(1.05);
     /* Agrandar la imagen cuando el cursor esté sobre ella */
 }

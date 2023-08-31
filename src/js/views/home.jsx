@@ -27,25 +27,25 @@ export const Home = () => {
 		<div className="bg-dark">
 			<p className="welcome-message">Bienvenidos a la Escuela Hogwarts de Magia y Hechicería!</p>
 			<div className="image-card">
-				<div className="card col-md-8 house-card gryffindor">
+				<div className="card col-md-8 house-card1 gryffindor">
 					<img src={gryffindor} className="card-img-top" alt="Gryffindor"
 						onClick={() => handleCardClick('/gryffindor')}
 					/>
 				</div>
 
-				<div className="card col-md-8 house-card ravenclaw">
+				<div className="card col-md-8 house-card1 ravenclaw">
 					<img src={ravenclaw} className="card-img-top" alt="Ravenclaw"
 						onClick={() => handleCardClick('/ravenclaw')}
 					/>
 				</div>
 
-				<div className="card col-md-8 house-card hufflepuff">
+				<div className="card col-md-8 house-card1 hufflepuff">
 					<img src={hufflepuff} className="card-img-top" alt="Hufflepuff"
 						onClick={() => handleCardClick('/hufflepuff')}
 					/>
 				</div>
 
-				<div className="card col-md-8 house-card slytherin">
+				<div className="card col-md-8 house-card1 slytherin">
 					<img src={slytherin} className="card-img-top" alt="Slytherin"
 						onClick={() => handleCardClick('/slytherin')}
 					/>
