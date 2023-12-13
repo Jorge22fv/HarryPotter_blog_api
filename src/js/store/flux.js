@@ -63,8 +63,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log('error', error));
 			},
 
-		}
-	};
+		},
+	}
 };
 
 export default getState;

@@ -1,6 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import "../../styles/home.css";
 import gryffindor from "../../img/gryffindor.png"
 import hufflepuff from "../../img/hufflepuff.png"
@@ -15,13 +15,6 @@ export const Home = () => {
 	const handleCardClick = (path) => {
 		history.push(path);
 	};
-
-	useEffect(() => {
-		sessionStorage.setItem('gryffindor', gryffindor);
-		sessionStorage.setItem('hufflepuff', hufflepuff);
-		sessionStorage.setItem('ravenclaw', ravenclaw);
-		sessionStorage.setItem('slytherin', slytherin);
-	}, []);
 
 	return (
 		<div className="bg-dark">
