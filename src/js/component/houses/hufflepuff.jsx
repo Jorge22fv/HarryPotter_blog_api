@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../../store/appContext";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 import hogwart from "../../../img/hogwart.png"
 
 
@@ -13,12 +15,18 @@ const Hufflepuff = () => {
             <div className="row">
                 {store.hufflepuffCharacters.map((character, i) => (
                     <div className="col-md-3 col-xl-2" key={i}>
-                        <div className="card house-card">
-                            <img src={character.image ? character.image : hogwart} className="house-image" alt={character.name} />
-                            <div className="card-body">
-                                <h5 className="card-title house-title">{character.name}</h5>
+                        <Link to={`/profile/Hufflepuff/${character.name}`} className="text-decoration-none link-dark">
+                            <div className="card house-card">
+                                <img
+                                    src={character.image ? character.image : hogwart}
+                                    className="house-image"
+                                    alt={character.name}
+                                />
+                                <div className="card-body">
+                                    <h5 className="card-title house-title">{character.name}</h5>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 ))}
             </div>

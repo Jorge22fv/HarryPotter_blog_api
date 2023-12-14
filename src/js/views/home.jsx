@@ -18,7 +18,7 @@ export const Home = () => {
 
 	return (
 		<div className="bg-dark">
-			<p className="welcome-message">Bienvenidos a la Escuela Hogwarts de Magia y Hechicería!</p>
+			<p className="welcome-message">Welcome to Hogwarts!</p>
 			<div className="image-card">
 				<div className="card col-md-8 house-card1 gryffindor">
 					<img src={gryffindor} className="card-img-top" alt="Gryffindor"

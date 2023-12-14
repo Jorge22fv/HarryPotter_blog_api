@@ -11,7 +11,7 @@ import Slytherin from "./component/houses/slytherin.jsx"
 import Hufflepuff from "./component/houses/hufflepuff.jsx";
 import Gryffindor from "./component/houses/gryffindor.jsx";
 import Ravenclaw from "./component/houses/ravenclaw.jsx";
-
+import Profile from "./views/profile.jsx";
 
 const Layout = () => {
 
@@ -37,6 +37,10 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/hufflepuff">
 							<Hufflepuff />
+						</Route>
+						<Route exact path="/profile/:house/:characterName">
+
+							<Profile />
 						</Route>
 
 
