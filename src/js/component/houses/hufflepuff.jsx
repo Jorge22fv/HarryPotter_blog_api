@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Context } from "../../store/appContext";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
+
 
 import hogwart from "../../../img/hogwart.png"
 
@@ -8,9 +10,14 @@ import hogwart from "../../../img/hogwart.png"
 
 const Hufflepuff = () => {
     const { store } = useContext(Context);
+    const history = useHistory();
+    const goBack = () => {
+        history.goBack();
+    }
 
     return (
         <div className="house-container">
+            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i class="fas fa-reply"></i></button>
             <h3 className="welcome-message">Hufflepuff</h3>
             <div className="row">
                 {store.hufflepuffCharacters.map((character, i) => (

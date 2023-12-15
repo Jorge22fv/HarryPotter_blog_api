@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { Context } from "../store/appContext";
 import "../../styles/profile.css"
 
@@ -10,6 +10,10 @@ const Profile = () => {
     const { house, characterName } = useParams();
     const characters = store[house.toLowerCase() + "Characters"];
     const character = characters.find((char) => char.name === characterName);
+    const history = useHistory();
+    const goBack = () => {
+        history.goBack();
+    }
 
     if (!character) {
         return <div className="loader-container">
@@ -19,6 +23,7 @@ const Profile = () => {
 
     return (
         <div className="profile-container">
+            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i class="fas fa-reply"></i></button>
             <h1 className="character-name">{character.name}</h1>
             <div className="character-details-container">
                 <img
@@ -32,6 +37,7 @@ const Profile = () => {
                     <p>{`Gender: ${character.gender ? character.gender : "No information"}`}</p>
                     <p>{`Hair colour: ${character.hairColour ? character.hairColour : "No information"}`}</p>
                     <p>{`Eye colour: ${character.eyeColour ? character.eyeColour : "No information"}`}</p>
+                    <button className="btn btn-warning">Add to favorite</button>
                 </div>
             </div>
         </div>
