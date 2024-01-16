@@ -37,7 +37,7 @@ const Profile = () => {
                     <p>{`Gender: ${character.gender ? character.gender : "No information"}`}</p>
                     <p>{`Hair colour: ${character.hairColour ? character.hairColour : "No information"}`}</p>
                     <p>{`Eye colour: ${character.eyeColour ? character.eyeColour : "No information"}`}</p>
-                    <button onClick={() => agregarAFavoritos(character)} className="btn btn-warning">Add to favorite</button>
+                    <button onClick={() => agregarAFavoritos(character)} className="btn btn-warning">Add to favorites</button>
                 </div>
             </div>
         </div>

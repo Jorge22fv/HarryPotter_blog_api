@@ -43,7 +43,7 @@ const Layout = () => {
 
 							<Profile />
 						</Route>
-						<Route exact path="/favoritos">
+						<Route exact path="/favorites">
 							<Favoritos />
 						</Route>
 

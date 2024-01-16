@@ -17,7 +17,7 @@ const Favoritos = () => {
             <button onClick={goBack} className="float-start ms-3 mt-3 back">
                 <i className="fas fa-reply"></i>
             </button>
-            <h3 className="welcome-message">Favoritos</h3>
+            <h3 className="welcome-message">Favorites</h3>
 
             {favoritos && favoritos.length > 0 ? (
                 <div className="row">
@@ -31,6 +31,7 @@ const Favoritos = () => {
                                 />
                                 <div className="card-body">
                                     <h5 className="card-title house-title">{character.name}</h5>
+                                    <h3 className="card-title house-title">House: <small>{character.house}</small></h3>
                                     <div className="button-container">
                                         <button
                                             onClick={() => eliminarDeFavoritos(character)}
@@ -45,7 +46,7 @@ const Favoritos = () => {
                     ))}
                 </div>
             ) : (
-                <p>No hay personajes en favoritos.</p>
+                <p>There are no characters in favorites.</p>
             )}
         </div>
     );
