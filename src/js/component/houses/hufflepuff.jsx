@@ -31,7 +31,7 @@ const Hufflepuff = () => {
                                 <h5 className="card-title house-title">{character.name}</h5>
                                 <div className="button-container">
                                     <Link
-                                        to={`/profile/Hufflepuff/${character.name}`}
+                                        to={`/profile/hufflepuff/${character.name}`}
                                         className="btn btn-details">
                                         Details
                                     </Link>

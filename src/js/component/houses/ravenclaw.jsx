@@ -33,7 +33,7 @@ const Ravenclaw = () => {
                                 <h5 className="card-title house-title">{character.name}</h5>
                                 <div className="button-container">
                                     <Link
-                                        to={`/profile/Ravenclaw/${character.name}`}
+                                        to={`/profile/ravenclaw/${character.name}`}
                                         className="btn btn-details"
                                     >
                                         Details

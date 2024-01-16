@@ -28,7 +28,7 @@ const Gryffindor = () => {
                                 <h5 className="card-title house-title">{character.name}</h5>
                                 <div className="button-container">
                                     <Link
-                                        to={`/profile/Gryffindor                             /${character.name}`}
+                                        to={`/profile/gryffindor/${character.name}`}
                                         className="btn btn-details">
                                         Details
                                     </Link>
