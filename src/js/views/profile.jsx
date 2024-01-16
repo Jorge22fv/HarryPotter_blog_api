@@ -23,7 +23,7 @@ const Profile = () => {
 
     return (
         <div className="profile-container">
-            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i class="fas fa-reply"></i></button>
+            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i className="fas fa-reply"></i></button>
             <h1 className="character-name">{character.name}</h1>
             <div className="character-details-container">
                 <img

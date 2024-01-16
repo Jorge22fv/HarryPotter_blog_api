@@ -14,23 +14,33 @@ const Gryffindor = () => {
     }
     return (
         <div className="house-container">
-            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i class="fas fa-reply"></i></button>
+            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i className="fas fa-reply"></i></button>
             <h3 className="welcome-message">Gryffindor</h3>
             <div className="row">
                 {store.gryffindorCharacters.map((character, i) => (
-                    <div className="col-md-3 col-xl-2" key={i}>
-                        <Link to={`/profile/Gryffindor/${character.name}`} className="text-decoration-none">
-                            <div className="card house-card">
-                                <img
-                                    src={character.image ? character.image : hogwart}
-                                    className="house-image"
-                                    alt={character.name}
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title house-title link-dark">{character.name}</h5>
+                    <div className="col-md-3 col-xl-2 mb-5" key={i}>
+                        <div className="card house-card">
+                            <img
+                                src={character.image ? character.image : hogwart}
+                                className="house-image"
+                                alt={character.name} />
+                            <div className="card-body">
+                                <h5 className="card-title house-title">{character.name}</h5>
+                                <div className="button-container">
+                                    <Link
+                                        to={`/profile/Gryffindor/${character.name}`}
+                                        className="btn btn-details">
+                                        Details
+                                    </Link>
+                                    <button
+                                        onClick={() => agregarAFavoritos(character)}
+                                        className="btn btn-favorite"
+                                    >
+                                        <i className="fas fa-heart"></i>
+                                    </button>
                                 </div>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 ))}
             </div>

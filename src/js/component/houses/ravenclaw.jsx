@@ -3,34 +3,50 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Context } from "../../store/appContext";
 import { useHistory } from "react-router-dom";
 
-import hogwart from "../../../img/hogwart.png"
+import hogwart from "../../../img/hogwart.png";
 
 const Ravenclaw = () => {
     const { store } = useContext(Context);
     const history = useHistory();
     const goBack = () => {
         history.goBack();
-    }
+    };
+
+    const agregarAFavoritos = (character) => {
+        console.log('agregago a fav');
+    };
 
     return (
         <div className="house-container">
-            <button onClick={goBack} className="float-start ms-3 mt-3 back"><i class="fas fa-reply"></i></button>
+            <button onClick={goBack} className="float-start ms-3 mt-3 back">
+                <i className="fas fa-reply"></i>
+            </button>
             <h3 className="welcome-message">Ravenclaw</h3>
             <div className="row">
                 {store.ravenclawCharacters.map((character, i) => (
-                    <div className="col-md-3 col-xl-2" key={i}>
-                        <Link to={`/profile/Ravenclaw/${character.name}`} className="text-decoration-none link-dark">
-                            <div className="card house-card">
-                                <img
-                                    src={character.image ? character.image : hogwart}
-                                    className="house-image"
-                                    alt={character.name}
-                                />
-                                <div className="card-body">
-                                    <h5 className="card-title house-title">{character.name}</h5>
+                    <div className="col-md-3 col-xl-2 mb-5" key={i}>
+                        <div className="card house-card">
+                            <img
+                                src={character.image ? character.image : hogwart}
+                                className="house-image"
+                                alt={character.name} />
+                            <div className="card-body">
+                                <h5 className="card-title house-title">{character.name}</h5>
+                                <div className="button-container">
+                                    <Link
+                                        to={`/profile/Ravenclaw/${character.name}`}
+                                        className="btn btn-details">
+                                        Details
+                                    </Link>
+                                    <button
+                                        onClick={() => agregarAFavoritos(character)}
+                                        className="btn btn-favorite"
+                                    >
+                                        <i className="fas fa-heart"></i>
+                                    </button>
                                 </div>
                             </div>
-                        </Link>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -39,3 +55,4 @@ const Ravenclaw = () => {
 };
 
 export default Ravenclaw;
+
