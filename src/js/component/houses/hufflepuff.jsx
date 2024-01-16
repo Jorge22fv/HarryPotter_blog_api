@@ -9,7 +9,7 @@ import hogwart from "../../../img/hogwart.png"
 
 
 const Hufflepuff = () => {
-    const { store } = useContext(Context);
+    const { store, agregarAFavoritos } = useContext(Context);
     const history = useHistory();
     const goBack = () => {
         history.goBack();

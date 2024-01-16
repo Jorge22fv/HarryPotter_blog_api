@@ -1,19 +1,17 @@
+// Ravenclaw.js
 import React, { useContext } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import { Context } from "../../store/appContext";
 import { useHistory } from "react-router-dom";
 
 import hogwart from "../../../img/hogwart.png";
 
 const Ravenclaw = () => {
-    const { store } = useContext(Context);
+    const { store, agregarAFavoritos } = useContext(Context);
     const history = useHistory();
+
     const goBack = () => {
         history.goBack();
-    };
-
-    const agregarAFavoritos = (character) => {
-        console.log('agregago a fav');
     };
 
     return (
@@ -29,13 +27,15 @@ const Ravenclaw = () => {
                             <img
                                 src={character.image ? character.image : hogwart}
                                 className="house-image"
-                                alt={character.name} />
+                                alt={character.name}
+                            />
                             <div className="card-body">
                                 <h5 className="card-title house-title">{character.name}</h5>
                                 <div className="button-container">
                                     <Link
                                         to={`/profile/Ravenclaw/${character.name}`}
-                                        className="btn btn-details">
+                                        className="btn btn-details"
+                                    >
                                         Details
                                     </Link>
                                     <button
@@ -55,4 +55,3 @@ const Ravenclaw = () => {
 };
 
 export default Ravenclaw;
-

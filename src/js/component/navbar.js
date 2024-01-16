@@ -10,7 +10,7 @@ export const Navbar = () => {
           <a href="/" className="navbar-link">Home</a>
         </li>
         <li className="navbar-item">
-          <a href="/favorites" className="navbar-link">Favoritos</a>
+          <Link to="/favoritos" className="navbar-link">Favoritos</Link>
         </li>
       </ul>
     </nav>

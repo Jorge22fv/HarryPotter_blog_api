@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 import hogwart from "../../../img/hogwart.png"
 
 const Gryffindor = () => {
-    const { store } = useContext(Context);
+    const { store, agregarAFavoritos } = useContext(Context);
     const history = useHistory();
     const goBack = () => {
         history.goBack();
@@ -28,7 +28,7 @@ const Gryffindor = () => {
                                 <h5 className="card-title house-title">{character.name}</h5>
                                 <div className="button-container">
                                     <Link
-                                        to={`/profile/Gryffindor/${character.name}`}
+                                        to={`/profile/Gryffindor                             /${character.name}`}
                                         className="btn btn-details">
                                         Details
                                     </Link>
