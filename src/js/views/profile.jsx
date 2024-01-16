@@ -6,7 +6,7 @@ import "../../styles/profile.css"
 import hogwart from "../../img/hogwart.png"
 
 const Profile = () => {
-    const { store } = useContext(Context);
+    const { store, agregarAFavoritos } = useContext(Context);
     const { house, characterName } = useParams();
     const characters = store[house.toLowerCase() + "Characters"];
     const character = characters.find((char) => char.name === characterName);
@@ -37,7 +37,7 @@ const Profile = () => {
                     <p>{`Gender: ${character.gender ? character.gender : "No information"}`}</p>
                     <p>{`Hair colour: ${character.hairColour ? character.hairColour : "No information"}`}</p>
                     <p>{`Eye colour: ${character.eyeColour ? character.eyeColour : "No information"}`}</p>
-                    <button className="btn btn-warning">Add to favorite</button>
+                    <button onClick={() => agregarAFavoritos(character)} className="btn btn-warning">Add to favorite</button>
                 </div>
             </div>
         </div>
