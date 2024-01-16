@@ -23,7 +23,6 @@ const injectContext = PassedComponent => {
 			const existeEnFavoritos = state.favoritos.find(item => item.id === character.id);
 			if (!existeEnFavoritos) {
 				const nuevosFavoritos = [...state.favoritos, character];
-				console.log(nuevosFavoritos);
 				setStore({ favoritos: nuevosFavoritos });
 			}
 		};
