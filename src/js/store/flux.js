@@ -13,7 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch(process.env.Slytherin, requestOptions)
+				fetch("https://hp-api.onrender.com/api/characters/house/slytherin", requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						slytherinCharacters: result
@@ -27,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch(process.env.Hufflepuff, requestOptions)
+				fetch("https://hp-api.onrender.com/api/characters/house/hufflepuff", requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						hufflepuffCharacters: result
@@ -41,7 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch(process.env.Ravenclaw, requestOptions)
+				fetch("https://hp-api.onrender.com/api/characters/house/ravenclaw", requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						ravenclawCharacters: result
@@ -55,7 +55,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					redirect: 'follow'
 				};
 
-				fetch(process.env.Gryffindor, requestOptions)
+				fetch("https://hp-api.onrender.com/api/characters/house/gryffindor", requestOptions)
 					.then(response => response.json())
 					.then(result => setStore({
 						gryffindorCharacters: result
